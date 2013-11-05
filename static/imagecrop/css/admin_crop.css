@@ -1,0 +1,149 @@
+/* FORM NOTICIA */
+#noticia_form{
+    position: relative;
+}
+
+#overlay{
+    left: 0;
+    top: 0;
+    display: none;
+    position: fixed;
+    background: url("/static/imagecrop/img/overlay-bg.png");
+    z-index: 100;
+}
+
+#loading-image{
+    display: none;
+    position: fixed;
+    background-color: #333;
+    padding: 25px 25px 30px 25px;
+}
+
+#loading-url{
+    display: none;
+    position: fixed;
+    width: 128px;
+    height: 158px;
+    border: solid 1px #0A64A4;
+    background: url(/static/imagecrop/img/loading-blue-128.gif) no-repeat 0px 0px;
+}
+
+.file-upload .url-image-field{
+    height: 20px;
+    width: 250px;
+    border: solid 1px #799274;
+    border-radius: 4px;
+    outline: none;
+}
+
+.file-upload .url-image-field:focus{
+    border-color: #46723D;
+}
+
+.file-upload .button-url-img{
+    padding: 5px;
+    border: solid 1px #46723D;
+    color: #46723D;
+    background-color: #D7FBCF;
+    border-radius: 2px;
+    margin-left: 5px;
+    font-size: 1.1em;
+}
+
+.file-upload .button-url-img:hover{
+    background-color: #A0D395;
+}
+
+.close-loading{
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+    color: #333;
+    background: #9FBFD4;
+    padding: 4px 6px 4px 6px;
+}
+
+#loading-url .close-loading{
+    display: none;
+}
+
+#loading-url:hover .close-loading{
+    display: block;
+}
+
+.close-loading:hover{
+    background-color: #FB8671;
+    cursor: pointer;
+}
+
+#overlay div p{
+    display: block;
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    font-size: 1em;
+    background-color: #555;
+    padding: 4px 0 6px 0;
+}
+
+#overlay .uploading{
+    color: #FFF;
+}
+
+#overlay .cancelado{
+    color: #FB8D3F;
+}
+
+#overlay .erro{
+    color: #FB8671;
+}
+
+#overlay .concluido{
+    color: #73E567;
+}
+
+#image-loading-overlay{
+    background: url("/static/imagecrop/img/bg-img-loading.png");
+    display: none;
+    position: absolute;
+    z-index: 1000;
+}
+
+#image-loading{
+    width: 43px;
+    height: 11px;
+    display: none;
+    padding: 5px;
+    background: #FFFFFF url("/static/imagecrop/img/image-loading.gif") center no-repeat;
+}
+
+#getsrc-status{
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    display: none;
+    background-color: #FAC7C7;
+    border: 1px solid #9C0909;
+    color: #9C0909;
+}
+
+.cancel-crop{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #333;
+    background: #9FBFD4;
+    padding: 4px 6px 4px 6px;
+    z-index: 1000;
+}
+
+.cancel-crop:hover{
+    background-color: #FB8671;
+    cursor: pointer;
+}
+
+

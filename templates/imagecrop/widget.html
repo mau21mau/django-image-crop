@@ -1,0 +1,25 @@
+
+<input type="file" {{ final_attrs|safe }} value="{{ value }}" />
+<div id='cancel-crop' style="padding: 10px; background: #ff0000;">X</div>
+<div>
+    <img class="crop" id="imagecrop_{{ field_name }}" {% if value %}src="/media/{{ value }}"{% endif %} 
+        data-size="{{ dimensions }}"
+        data-originalsize="{{ original_size }}"
+        data-originalsrc="/media/{{ original_src }}"
+        data-croppedsrc="/media/{{ value }}"
+    />
+</div>
+
+<script type="text/javascript">
+    window.instance_id = {{ model_id }};
+    $(document).ready(function(){
+        $("body").on("change", "#{{ id }}", function(e) {
+            //ajax_file_upload(this);
+            var model_package = "{{ model_package }}";
+            var model_name = "{{ model_name }}";
+            var attr_name = "{{ field_name }}";
+            
+            ajax_file_upload(this, model_package, model_name, attr_name);
+        });
+    })
+</script>
